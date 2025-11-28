@@ -69,7 +69,7 @@ const About = () => {
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 p-1">
               <div className="w-full h-full rounded-2xl bg-gray-100 dark:bg-dark-800 flex items-center justify-center overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
+                  src="/standing.png"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -93,9 +93,10 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              I'm a passionate <span className="text-primary-600 dark:text-primary-400 font-semibold">Full Stack Developer</span> with
-              over 10 years of experience in creating digital experiences that
-              make a difference.
+              I'm a passionate <span className="text-primary-600 dark:text-primary-400 font-semibold">Full Stack Web Developer</span> with
+              over 3 months of experience in creating digital experiences that
+              make a difference. I am currently working as an intern at MAKTECH SOLUCTION,
+              where I contribute to real-world projects and gain practical industry experience.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               My journey in web development started with a curiosity for how
@@ -111,9 +112,9 @@ const About = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 pt-6">
               {[
-                { value: '10+', label: 'Years Exp.' },
-                { value: '50+', label: 'Projects' },
-                { value: '30+', label: 'Happy Clients' },
+                { value: '3+', label: 'Months Exp.' },
+                { value: '12+', label: 'Projects' },
+                { value: '4+', label: 'Happy Clients' },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
