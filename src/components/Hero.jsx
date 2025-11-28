@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, Download, Send } from 'lucide-react';
+import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   const containerVariants = {
@@ -47,8 +48,16 @@ const Hero = () => {
                 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 dark:text-white mb-4"
               >
                 Hi, I'm{' '}
-                <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
-                  SHANJID AHMED RAFI
+                <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent inline-block">
+                  <Typewriter
+                    options={{
+                      strings: ['SHANJID AHMED RAFI'],
+                      autoStart: true,
+                      loop: true,
+                      delay: 200,
+                      cursor: '',
+                    }}
+                  />
                 </span>
               </motion.h1>
 
@@ -68,7 +77,7 @@ const Hero = () => {
                 I design and build accessible, high-performance web applications using React and
                 Next.js, leveraging modern tooling like Tailwind CSS. I focus on
                 clean, component-driven code, server-rendered and client-side solutions, responsive
-                interfaces, and practical UX—delivering reliable, production-ready applications.
+                interfaces, and practical UX delivering reliable, production-ready applications.
               </motion.p>
 
               {/* CTA Buttons */}

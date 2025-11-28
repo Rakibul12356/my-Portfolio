@@ -103,7 +103,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="section-container bg-gray-50 dark:bg-dark-800"
+      className="section-container bg-gray-50 dark:bg-dark-900"
     >
       <motion.div
         ref={ref}
