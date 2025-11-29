@@ -47,9 +47,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, link: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, link: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, link: 'https://twitter.com', label: 'Twitter' },
+    { icon: Github, link: 'https://github.com/shanjid5566', label: 'GitHub' },
+    { icon: Linkedin, link: 'https://www.linkedin.com/in/shanjid-ahmed-0b1691157/', label: 'LinkedIn' },
   ];
 
   return (
