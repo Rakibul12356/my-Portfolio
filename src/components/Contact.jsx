@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, MapPin, Phone, Send, Linkedin, Github, Twitter } from 'lucide-react';
+import Swal from 'sweetalert2';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -12,13 +14,73 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // Check if EmailJS credentials are configured
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+      if (!publicKey || !serviceId || !templateId) {
+        throw new Error('EmailJS not configured. Please check .env file.');
+      }
+
+      // Initialize EmailJS with your public key
+      emailjs.init(publicKey);
+      
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }
+      );
+
+      console.log('Email sent successfully:', result);
+
+      // Show success message
+      Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: 'Thank you for your message! I will get back to you soon.',
+        confirmButtonColor: '#3b82f6',
+      });
+
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Email send error:', error);
+      
+      let errorMessage = 'Something went wrong! Please try again or email me directly at shanjidahmed66@gmail.com';
+      
+      if (error.message && error.message.includes('EmailJS not configured')) {
+        errorMessage = 'Email service is not configured yet. Please contact me directly at shanjidahmed66@gmail.com';
+      } else if (error.text) {
+        if (error.text.includes('insufficient authentication scopes')) {
+          errorMessage = 'Gmail permission issue detected. Please reconnect your Gmail service in EmailJS dashboard or contact me at shanjidahmed66@gmail.com';
+        } else {
+          errorMessage = `Error: ${error.text}. Please email me directly at shanjidahmed66@gmail.com`;
+        }
+      }
+      
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: errorMessage,
+        confirmButtonColor: '#3b82f6',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -256,12 +318,13 @@ const Contact = () => {
 
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full btn-primary justify-center"
+                disabled={isSubmitting}
+                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className="w-full btn-primary justify-center disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send size={20} />
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
             </form>
           </motion.div>
