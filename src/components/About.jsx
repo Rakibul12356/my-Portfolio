@@ -69,7 +69,7 @@ const About = () => {
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 p-1">
               <div className="w-full h-full rounded-2xl bg-gray-100 dark:bg-dark-800 flex items-center justify-center overflow-hidden">
                 <img
-                  src="/standing.png"
+                  src="/rakib_white_image.png"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

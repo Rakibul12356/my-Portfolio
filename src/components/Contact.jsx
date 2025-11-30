@@ -32,7 +32,7 @@ const Contact = () => {
 
       // Initialize EmailJS with your public key
       emailjs.init(publicKey);
-      
+
       // Send email using EmailJS
       const result = await emailjs.send(
         serviceId,
@@ -59,19 +59,19 @@ const Contact = () => {
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('Email send error:', error);
-      
-      let errorMessage = 'Something went wrong! Please try again or email me directly at shanjidahmed66@gmail.com';
-      
+
+      let errorMessage = 'Something went wrong! Please try again or email me directly at rakibulhasan@gmail.com';
+
       if (error.message && error.message.includes('EmailJS not configured')) {
-        errorMessage = 'Email service is not configured yet. Please contact me directly at shanjidahmed66@gmail.com';
+        errorMessage = 'Email service is not configured yet. Please contact me directly at rakibulhasan@gmail.com';
       } else if (error.text) {
         if (error.text.includes('insufficient authentication scopes')) {
-          errorMessage = 'Gmail permission issue detected. Please reconnect your Gmail service in EmailJS dashboard or contact me at shanjidahmed66@gmail.com';
+          errorMessage = 'Gmail permission issue detected. Please reconnect your Gmail service in EmailJS dashboard or contact me at rakibulhasan@gmail.com';
         } else {
-          errorMessage = `Error: ${error.text}. Please email me directly at shanjidahmed66@gmail.com`;
+          errorMessage = `Error: ${error.text}. Please email me directly at rakibulhasan@gmail.com`;
         }
       }
-      
+
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -91,8 +91,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'shanjidahmed66@gmail.com',
-      link: 'https://mail.google.com/mail/?view=cm&fs=1&to=shanjidahmed66@gmail.com',
+      value: 'rakibulhasan@gmail.com',
+      link: 'https://mail.google.com/mail/?view=cm&fs=1&to=rakibulhasan@gmail.com',
     },
     {
       icon: Phone,
@@ -109,8 +109,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, link: 'https://github.com/shanjid5566', label: 'GitHub' },
-    { icon: Linkedin, link: 'https://www.linkedin.com/in/shanjid-ahmed-0b1691157/', label: 'LinkedIn' },
+    { icon: Github, link: 'https://github.com/Rakibul12356', label: 'GitHub' },
+    { icon: Linkedin, link: 'https://www.linkedin.com/in/rakibul-hasan/', label: 'LinkedIn' },
   ];
 
   return (

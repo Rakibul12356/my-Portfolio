@@ -51,7 +51,7 @@ const Hero = () => {
                 <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent inline-block">
                   <Typewriter
                     options={{
-                      strings: ['SHANJID AHMED RAFI'],
+                      strings: ['RAKIBUL HASAN'],
                       autoStart: true,
                       loop: true,
                       delay: 200,
@@ -105,10 +105,10 @@ const Hero = () => {
             </div>
 
             {/* Right: image */}
-              <motion.div variants={itemVariants} className="hidden md:flex items-center justify-center">
+            <motion.div variants={itemVariants} className="hidden md:flex items-center justify-center">
               <div className="w-72 h-72 md:w-[420px] md:h-[420px] lg:w-[520px] lg:h-[520px] rounded-full bg-gradient-to-br from-primary-400 to-primary-600 p-1 shadow-2xl">
                 <div className="w-full h-full rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center overflow-hidden">
-                  <img src="/seting.png" alt="Profile" className="w-full h-full object-cover" />
+                  <img src="/rakib_white_image.png" alt="Profile" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>

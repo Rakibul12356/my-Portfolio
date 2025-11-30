@@ -31,14 +31,14 @@ const Footer = () => {
     {
       title: "Social",
       links: [
-        { name: "GitHub", href: "https://github.com/shanjid5566" },
+        { name: "GitHub", href: "https://github.com/Rakibul12356" },
         {
           name: "LinkedIn",
-          href: "https://www.linkedin.com/in/shanjid-ahmed-0b1691157/",
+          href: "https://www.linkedin.com/in/rakibul-hasan/",
         },
         {
           name: "Email",
-          href: "https://mail.google.com/mail/?view=cm&fs=1&to=shanjidahmed66@gmail.com",
+          href: "https://mail.google.com/mail/?view=cm&fs=1&to=rakibulhasan@gmail.com",
         },
       ],
     },
@@ -68,7 +68,7 @@ const Footer = () => {
                 size={16}
                 className="text-red-500 fill-red-500 animate-pulse"
               />
-              <span>by Shanjid Ahmed Rafi</span>
+              <span>by Rakibul Hasan</span>
             </div>
           </div>
 
@@ -108,7 +108,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-dark-700 text-center text-sm">
-          <p>© {new Date().getFullYear()} Shanjid Ahmed Rafi. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Rakibul Hasan. All rights reserved.</p>
         </div>
       </div>
 
