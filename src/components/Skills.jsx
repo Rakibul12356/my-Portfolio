@@ -15,7 +15,6 @@ const Skills = () => {
         { name: "Tailwind CSS", level: 90 },
         { name: "Next.js", level: 75 },
         { name: "HTML/CSS", level: 90 },
-        { name: "Redux", level: 80 },
       ],
     },
     {
@@ -49,7 +48,6 @@ const Skills = () => {
     "Next.js",
     "Git",
     "Figma",
-    "Redux",
     "Firebase",
     "Framer Motion",
     "Vercel",

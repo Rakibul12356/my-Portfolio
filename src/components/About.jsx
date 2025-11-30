@@ -93,7 +93,7 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              I'm a passionate <span className="text-primary-600 dark:text-primary-400 font-semibold">Full Stack Web Developer</span> with
+              I'm a passionate <span className="text-primary-600 dark:text-primary-400 font-semibold">Frontend Developer</span> with
               over 3 months of experience in creating digital experiences that
               make a difference. I am currently working as an intern at MAKTECH SOLUCTION,
               where I contribute to real-world projects and gain practical industry experience.

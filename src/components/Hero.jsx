@@ -45,10 +45,10 @@ const Hero = () => {
               {/* Name */}
               <motion.h1
                 variants={itemVariants}
-                className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 dark:text-white mb-4"
+                className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4"
               >
-                Hi, I'm{' '}
-                <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent inline-block">
+                <span className="block md:inline">Hi, I'm{' '}</span>
+                <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent inline-block whitespace-nowrap">
                   <Typewriter
                     options={{
                       strings: ['RAKIBUL HASAN'],
@@ -66,7 +66,7 @@ const Hero = () => {
                 variants={itemVariants}
                 className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 font-medium"
               >
-                Full Stack Web Developer
+                Frontend Developer
               </motion.p>
 
               {/* Description */}
@@ -94,8 +94,8 @@ const Hero = () => {
                   <span>Get In Touch</span>
                 </a>
                 <a
-                  href="/resume.pdf"
-                  download
+                  href="/Rakibul_Hasan.pdf"
+                  download="Rakibul_Hasan.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 text-primary-600 dark:text-primary-400 font-medium hover:bg-primary-50 dark:hover:bg-primary-900/20 rounded-lg transition-all duration-300 whitespace-nowrap"
                 >
                   <Download size={20} />
@@ -106,7 +106,7 @@ const Hero = () => {
 
             {/* Right: image */}
             <motion.div variants={itemVariants} className="hidden md:flex items-center justify-center">
-              <div className="w-72 h-72 md:w-[420px] md:h-[420px] lg:w-[520px] lg:h-[520px] rounded-full bg-gradient-to-br from-primary-400 to-primary-600 p-1 shadow-2xl">
+              <div className="w-64 h-64 md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] rounded-full bg-gradient-to-br from-primary-400 to-primary-600 p-1 shadow-2xl">
                 <div className="w-full h-full rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center overflow-hidden">
                   <img src="/rakib_white_image.png" alt="Profile" className="w-full h-full object-cover" />
                 </div>
