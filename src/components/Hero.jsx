@@ -94,8 +94,8 @@ const Hero = () => {
                   <span>Get In Touch</span>
                 </a>
                 <a
-                  href="/Rakibul_Hasan.pdf"
-                  download="Rakibul_Hasan.pdf"
+                  href="/rakibul-hasan.pdf"
+                  download="rakibul-hasan.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 text-primary-600 dark:text-primary-400 font-medium hover:bg-primary-50 dark:hover:bg-primary-900/20 rounded-lg transition-all duration-300 whitespace-nowrap"
                 >
                   <Download size={20} />

@@ -46,13 +46,13 @@ const Navbar = () => {
   ], []);
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/shanjid5566", label: "GitHub" },
+    { icon: Github, href: "https://github.com/Rakibul12356", label: "GitHub" },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/shanjid-ahmed-0b1691157/",
+      href: "https://www.linkedin.com/in/rakibul-hasan-syk/",
       label: "LinkedIn",
     },
-    { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=shanjidahmed66@gmail.com", label: "Email" },
+    { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=mdrakibulhasan12346@gmail.com", label: "Email" },
   ];
 
   // Active link tracking for highlighting (desktop + mobile)
